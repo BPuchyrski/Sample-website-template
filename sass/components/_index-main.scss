@@ -12,6 +12,7 @@
   padding-top: 200px;
   max-width: 1600px;
   margin: 0 auto;
+  background-size: cover;
 }
 .main-section-header {
   display: flex;
@@ -22,7 +23,7 @@
     text-transform: uppercase;
     text-align: center;
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
@@ -58,23 +59,29 @@
     margin-top: 94px;
     margin-bottom: 50px;
     line-height: 1.17;
+    &-hidden {
+      display: none;
+    }
   }
 }
 .work-description {
+  &__text {
+    text-align: justify;
+  }
   &__list {
-    display: flex;
     font-size: 14px;
     color: $lightgray;
     letter-spacing: 0.03em;
     list-style: none;
     line-height: 1.71;
     padding-left: 0px;
+
+    margin: 0 auto;
   }
   &__item {
-    margin-right: 30px;
-    &--margin-0 {
-      margin-right: 0px;
-    }
+    max-width: 100%;
+    text-align: center;
+
     &--bigger {
       color: $gray;
       font-weight: 700;
@@ -82,17 +89,25 @@
       letter-spacing: 0.03em;
       margin-top: 0px;
       margin-bottom: 10px;
+      text-align: center;
     }
   }
   &__icon {
     width: 70px;
     height: 70px;
+    position: relative;
+    top: 25px;
   }
   &__icon-div {
     background-color: rgba(245, 244, 250, 1);
     display: inline-block;
-    padding: 25px 100px 25px 100px;
+    height: 120px;
+    width: 100%;
     margin-bottom: 30px;
+    margin-top: 30px;
+    &--margin-top-0 {
+      margin-top: 0px;
+    }
   }
   &--position {
     position: relative;
@@ -123,6 +138,7 @@
 
 .team {
   background-color: #f5f4fa;
+  margin: 0 auto;
   &__header {
     text-align: center;
     font-weight: 700;
@@ -133,9 +149,13 @@
     margin-top: 0px;
     margin-bottom: 50px;
   }
+  &__photo {
+    max-width: 100%;
+    margin: 0 auto;
+    display: block;
+  }
   &__list {
     list-style: none;
-    display: flex;
     padding-left: 0px;
     justify-content: center;
     margin-bottom: 0px;
@@ -143,7 +163,7 @@
   }
   &__item {
     text-align: center;
-    margin-right: 30px;
+
     background-color: $white;
     font-size: 16px;
     color: $lightgray;
@@ -169,11 +189,10 @@
     fill: rgba(175, 177, 184, 1);
     &-list {
       display: flex;
-      padding-left: 32px;
-      padding-right: 32px;
-      justify-content: space-between;
       margin-top: 16px;
       list-style: none;
+      gap: 10px;
+      justify-content: center;
     }
     &-div {
       width: 44px;
@@ -221,11 +240,14 @@
   }
   &__div {
     display: flex;
-    justify-content: space-between;
     list-style: none;
+    gap: 30px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   &__bg-and-border {
-    width: 170px;
+    width: 210px;
     height: 92px;
     border: 1px solid #afb1b8;
     border-radius: 4px;
