@@ -67,6 +67,7 @@
   &__list {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
   }
   &__item {
     font-size: 20px;
