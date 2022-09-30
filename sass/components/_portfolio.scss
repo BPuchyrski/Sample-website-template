@@ -2,12 +2,15 @@
   &__list {
     list-style: none;
     display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
     justify-content: center;
     padding: 0px;
     margin: 0px;
     margin-bottom: 50px;
   }
   &__btn {
+    width: 100%;
     background-color: #f5f4fa;
     color: $gray;
     font-weight: 500;
@@ -33,20 +36,26 @@
     }
   }
   &__item {
-    margin-right: 8px;
-
+    // flex-basis: calc((100% - 2 * 8px) / 3);
     &--margin-right-0 {
       margin-right: 0px;
     }
   }
 }
-
+@media screen and (max-width: 767px) {
+  .portfolio-nav__item {
+    flex-basis: calc((100% - 2 * 8px) / 3);
+  }
+  .portfolio-nav__list {
+    justify-content: flex-start;
+  }
+}
 .portfolio {
   &__list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    height: 100%;
+    width: 100%;
     gap: 30px;
 
     justify-content: center;
@@ -67,6 +76,7 @@
   &__img {
     position: relative;
     overflow: hidden;
+    max-width: 354px;
   }
   &__info {
     position: absolute;
@@ -84,8 +94,9 @@
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
   &__item {
+    width: 100%;
     background-color: $white;
-    max-width: 370px;
+    max-width: 354px;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     &:hover .portfolio__info {
       transform: translatey(0);
@@ -105,5 +116,10 @@
       border-left: 1px #ececec solid;
       line-height: 1.9;
     }
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio__item {
+    flex-basis: calc((100% - 1 * 30px) / 2);
   }
 }

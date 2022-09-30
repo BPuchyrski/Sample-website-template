@@ -9,13 +9,37 @@
       rel="stylesheet"
       href="https://unpkg.com/modern-normalize@1.1.0/modern-normalize.css"
     />
-    <link rel="stylesheet" href="./css/main.min.css" />
+    <link rel="stylesheet" href="./sass/main.min.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
   </head>
   <body class="page">
+    <div class="js-menu-container">
+      <button type="button" class="js-close-menu">╳</button>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="./index.html">Agencja</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="./portfolio.html">Portfolio</a>
+        </li>
+        <li class="mobile-menu__item">
+          <a class="mobile-menu__link" href="">Kontakt</a>
+        </li>
+      </ul>
+      <ul class="mobile-menu-contact__list">
+        <li class="mobile-menu-contact__item">+48 111 111 111</li>
+        <li class="mobile-menu-contact__item">info@devstudio.com</li>
+      </ul>
+      <ul class="mobile-menu-socials__list">
+        <li class="mobile-menu-socials__item">Instagram</li>
+        <li class="mobile-menu-socials__item">Twitter</li>
+        <li class="mobile-menu-socials__item">Facebook</li>
+        <li class="mobile-menu-socials__item">Linkedin</li>
+      </ul>
+    </div>
     <header class="page-header">
       <div class="container header-container">
         <section class="header-logo">
@@ -65,6 +89,12 @@
             </li>
           </ul>
         </section>
+
+        <button class="header-mobile-button js-open-menu">
+          <svg class="header-hamburger" width="24" height="16">
+            <use href="images/icons.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main class="portfolio-site container">
@@ -265,67 +295,70 @@
     </main>
     <footer class="page-footer">
       <div class="footer container">
-        <div>
-          <section class="footer__logo">
-            <a class="footer__link" href="./index.html">
-              <span class="footer__link footer__link--blue">Web</span>Studio</a
-            >
-          </section>
-          <p class="footer__adress">m. Warszawa, Aleje Jerozolimskie 21</p>
-          <ul class="footer__contact-list">
-            <li
-              class="footer__contact-item footer__contact-item--margin-bottom"
-            >
-              <a class="footer__contact-link" href="mailto:info@example.com"
-                >info@example.com</a
+        <div class="footer-tablet">
+          <div class="footer-desktop">
+            <section class="footer__logo">
+              <a class="footer__link" href="./index.html">
+                <span class="footer__link footer__link--blue">Web</span
+                >Studio</a
               >
-            </li>
-            <li class="footer__contact-item">
-              <a class="footer__contact-link" href="tel:+48 111 111 111"
-                >+48 111 111 111</a
+            </section>
+            <p class="footer__adress">m. Warszawa, Aleje Jerozolimskie 21</p>
+            <ul class="footer__contact-list">
+              <li
+                class="footer__contact-item footer__contact-item--margin-bottom"
               >
-            </li>
-          </ul>
-        </div>
-        <div class="footer__socials">
-          <p class="footer__socials-join-us">dołącz do nas</p>
+                <a class="footer__contact-link" href="mailto:info@example.com"
+                  >info@example.com</a
+                >
+              </li>
+              <li class="footer__contact-item">
+                <a class="footer__contact-link" href="tel:+48 111 111 111"
+                  >+48 111 111 111</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer__socials">
+            <p class="footer__socials-join-us">dołącz do nas</p>
 
-          <ul class="footer__social-icon-div">
-            <li>
-              <a class="footer__icon-link" href=""
-                ><div class="footer__socials-div">
-                  <svg class="footer__icon" width="20" height="20">
-                    <use href="./images/icons.svg#instagram-2"></use>
-                  </svg></div
-              ></a>
-            </li>
-            <li>
-              <a class="footer__icon-link" href="">
-                <div class="footer__socials-div">
-                  <svg class="footer__icon" width="20" height="20">
-                    <use href="./images/icons.svg#twitter-1"></use>
-                  </svg></div
-              ></a>
-            </li>
-            <li>
-              <a class="footer__icon-link" href="">
-                <div class="footer__socials-div">
-                  <svg class="footer__icon" width="20" height="20">
-                    <use href="./images/icons.svg#Vector1"></use>
-                  </svg></div
-              ></a>
-            </li>
-            <li>
-              <a class="footer__icon-link" href=""
-                ><div class="footer__socials-div">
-                  <svg class="footer__icon" width="20" height="20">
-                    <use href="./images/icons.svg#linkedin-1"></use>
-                  </svg></div
-              ></a>
-            </li>
-          </ul>
+            <ul class="footer__social-icon-div">
+              <li>
+                <a class="footer__icon-link" href=""
+                  ><div class="footer__socials-div">
+                    <svg class="footer__icon" width="20" height="20">
+                      <use href="./images/icons.svg#instagram-2"></use>
+                    </svg></div
+                ></a>
+              </li>
+              <li>
+                <a class="footer__icon-link" href="">
+                  <div class="footer__socials-div">
+                    <svg class="footer__icon" width="20" height="20">
+                      <use href="./images/icons.svg#twitter-1"></use>
+                    </svg></div
+                ></a>
+              </li>
+              <li>
+                <a class="footer__icon-link" href="">
+                  <div class="footer__socials-div">
+                    <svg class="footer__icon" width="20" height="20">
+                      <use href="./images/icons.svg#Vector1"></use>
+                    </svg></div
+                ></a>
+              </li>
+              <li>
+                <a class="footer__icon-link" href=""
+                  ><div class="footer__socials-div">
+                    <svg class="footer__icon" width="20" height="20">
+                      <use href="./images/icons.svg#linkedin-1"></use>
+                    </svg></div
+                ></a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <div>
+        <div class="mobile-footera">
           <label for="sign-up" class="footer__label-sign-up"
             >Zapisz się do newslettera</label
           >
@@ -338,15 +371,18 @@
               id="sign-up"
               name="sign-up"
             />
-            <button type="submit" class="footer__btn-sign-up">
-              Zapisz się
-              <svg class="footer__svg-btn" width="24" height="24">
-                <use href="./images/icons.svg#icon-icon-send"></use>
-              </svg>
-            </button>
+            <div class="div-footer__btn-sign-up">
+              <button type="submit" class="footer__btn-sign-up">
+                Zapisz się
+                <svg class="footer__svg-btn" width="24" height="24">
+                  <use href="./images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
