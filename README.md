@@ -1,3 +1,3 @@
 Sample website template
 
-Technologies (HTML, CSS)
+Technologies (HTML, CSS, SCSS)
