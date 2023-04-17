@@ -1,1 +1,3 @@
-Szablon przykładowej strony internetowej 
+Sample website template
+
+Technologies (HTML, CSS)
